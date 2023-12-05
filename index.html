@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS animations</title>
+  <style>
+    /* Basisopmaak */
+    body {
+      font-family: sans-serif;
+      overflow: hidden;
+      background-color: hsl(0, 0%, 4%);
+
+    }
+
+    div {
+      background-color: violet;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      animation-name: miau;
+      animation-duration: 5s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+      position: absolute;
+      animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    }
+
+    #one {
+      animation-delay: .3s;
+    }
+
+    #two {
+      animation-delay: .6s;
+    }
+
+    #three {
+      animation-delay: .9s;
+    }
+
+    #four {
+      animation-delay: 1, 2s;
+    }
+
+    #five {
+      animation-delay: 1, 5s;
+    }
+
+    /* CSS animation */
+    /*****************/
+    @keyframes miau {
+      0%
+
+      /*from*/
+        {
+        transform: none;
+        transform: translate(45vw, 0vh);
+
+      }
+
+      20% {
+        transform: translate(90vw, 90vh);
+        background-color: indigo;
+      }
+
+      40% {
+        transform: translate(0vw, 25vh);
+        background-color: blueviolet;
+
+      }
+
+      60% {
+        transform: scale(0.5);
+        transform: translate(90vw, 25vh);
+        background-color: green;
+      }
+
+      80% {
+        transform: translate(0vw, 90vh);
+        background-color: yellow;
+      }
+
+      /* 80% {
+        transform: scale(2);
+        background-color: orange;
+      }
+
+      
+      /* to */
+      100% {
+        transform: scale(0);
+        transform: translate(45vw, 0vh);
+        background-color: red;
+      }
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CSS animations</h1>
+  <div></div>
+  <div id="one"></div>
+  <div id="two"></div>
+  <div id="three"></div>
+  <div id="four"></div>
+  <div id="five"></div>
+</body>
+
+</html>
